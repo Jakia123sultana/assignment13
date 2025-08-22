@@ -110,7 +110,7 @@ export default function LoginPage() {
         <h1 className="text-2xl font-bold mb-8 text-center text-purple-600">Login</h1>
 
         {/* Email/Password form */}
-        {/* <form onSubmit={handleEmailLogin} className="mb-6">
+        <form onSubmit={handleEmailLogin} className="mb-6">
           <div className="mb-4">
             <label className="block text-gray-700 mb-2">Email</label>
             <input
@@ -142,8 +142,8 @@ export default function LoginPage() {
           >
             {loading ? "Logging in..." : "Login"}
           </button>
-        </form> */}
-   <h1>This is nice to adede</h1>
+        </form>
+
         <div className="text-center text-gray-400 mb-4">OR</div>
 
         {/* Google login */}
