@@ -104,6 +104,7 @@
 // }
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function HomePage() {
   const [products, setProducts] = useState([]);
@@ -121,12 +122,12 @@ export default function HomePage() {
       <section className="bg-purple-600 text-white py-32 px-6 text-center">
         <h1 className="text-5xl font-bold mb-4">Welcome to MyShop</h1>
         <p className="text-lg mb-6">Discover amazing products and deals.</p>
-        <a
+        <Link
           href="/products"
           className="inline-block bg-white text-purple-600 font-semibold px-6 py-3 rounded shadow hover:bg-gray-100 transition"
         >
           Explore Products
-        </a>
+        </Link>
       </section>
 
       {/* Product Highlights */}
@@ -134,7 +135,10 @@ export default function HomePage() {
         <h2 className="text-4xl font-bold mb-12">Featured Products</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {products.map((product) => (
-            <div key={product.id} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition">
+            <div
+              key={product.id}
+              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition"
+            >
               <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
               <p className="text-gray-600 mb-4">{product.description}</p>
               <p className="font-bold text-lg">${product.price}</p>
@@ -146,20 +150,24 @@ export default function HomePage() {
       {/* Call to Action */}
       <section className="bg-purple-50 py-16 px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to shop?</h2>
-        <a
+        <Link
           href="/products"
           className="inline-block bg-purple-600 text-white font-semibold px-6 py-3 rounded shadow hover:bg-purple-700 transition"
         >
           Browse All Products
-        </a>
+        </Link>
       </section>
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8 text-center">
         <p>© 2025 MyShop. All rights reserved.</p>
         <div className="mt-4 space-x-4">
-          <a href="/login" className="hover:underline">Login</a>
-          <a href="/products" className="hover:underline">Products</a>
+          <Link href="/login" className="hover:underline">
+            Login
+          </Link>
+          <Link href="/products" className="hover:underline">
+            Products
+          </Link>
         </div>
       </footer>
     </main>
