@@ -30,6 +30,7 @@
 //     </html>
 //   );
 // }
+import { Toaster } from "react-hot-toast";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
         <SessionWrapper>
           <Navbar />
           {children}
+              <Toaster position="top-right" reverseOrder={false} />
         </SessionWrapper>
       </body>
     </html>
