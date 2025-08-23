@@ -131,7 +131,7 @@ export default function LoginPage() {
             {loading ? "Logging in..." : "Login"}
           </button>
         </form>
-
+<p>hello</p>
         {/* <div className="text-center text-gray-400 mb-4">OR</div> */}
 
         {/* Google login button */}
