@@ -132,10 +132,10 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <div className="text-center text-gray-400 mb-4">OR</div>
+        {/* <div className="text-center text-gray-400 mb-4">OR</div> */}
 
         {/* Google login button */}
-        <button
+        {/* <button
           onClick={handleGoogleLogin}
           disabled={loading}
           className={`w-full py-3 rounded-xl text-white font-semibold ${
@@ -143,7 +143,7 @@ export default function LoginPage() {
           }`}
         >
           {loading ? "Logging in..." : "Login with Google"}
-        </button>
+        </button> */}
       </div>
     </div>
   );
